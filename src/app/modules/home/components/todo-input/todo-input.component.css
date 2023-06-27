@@ -1,0 +1,33 @@
+.task-input__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#task__input {
+  background-color: #AF7EEB;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: var(--fonte-primaria), sans-serif;
+  font-weight: 100;
+  padding: 0.875em 0;
+  outline: none;
+  width: 280px;
+  align-self: center;
+}
+
+#task__input::placeholder {
+  color: #FFFFFF;
+}
+
+#delete__button{
+  margin-top: 1.3em;
+  width: 200px;
+  align-self: center;
+  background-color: #FF002EEB;
+  border-radius: 50px;
+  padding: 0.7em 0;
+  font-family: var(--fonte-primaria), sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+}
