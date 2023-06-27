@@ -12,6 +12,16 @@ export class TodoListComponent implements OnInit {
   task!: TaskList;
 
   ngOnInit(): void {
+    this.taskList = [
+      {
+        taskName: "teste",
+        done: true
+      },
+      {
+        taskName: "teste 2",
+        done: false
+      },
+    ]
 
   }
 }

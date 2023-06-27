@@ -1,1 +1,17 @@
-<p>todo-list works!</p>
+<main class="todo-list__container">
+  <ul class="to-dos__container" *ngIf="taskList.length > 0; else emptyList">
+    <dl class="task__container" *ngFor="let task of taskList">
+      <div class="task-info__container">
+        <input class="task__input" type="checkbox" name="task" [checked]="task.done" (change)="task.done = !task.done">
+        <label id="task__label" for="task">{{ task.taskName }}</label>
+      </div>
+      <a id="delete__icon">
+        <img src="../../../../../assets/img/Vector.svg" alt="Trash Bin Icon">
+      </a>
+    </dl>
+  </ul>
+</main>
+
+<ng-template #emptyList>
+  <img class="todo__image" src="../../../../../assets/img/bg-task 1.png" alt="">
+</ng-template>

@@ -1,0 +1,46 @@
+.todo-list__container {
+  background-color: #FFFFFF;
+  min-height: 300px;
+  align-items: center;
+}
+
+.to-dos__container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-around;
+}
+
+.todo__image {
+  margin: 0;
+}
+
+.task__container{
+  margin: 0.7em 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task-info__container {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+}
+
+.task__input {
+  margin-right: 0.8em;
+  border: 1px solid #939CBD;
+  cursor: pointer;
+}
+
+#task__label {
+  font-size: 18px;
+  font-family: var(--fonte-primaria), sans-serif;
+  font-weight: 100;
+  color: #939CBD;
+}
+
+#delete__icon {
+  cursor: pointer;
+}
