@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoInputComponent } from './components/todo-input/todo-input.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { TodoInputComponent } from './components/todo-input/todo-input.component
     TodoInputComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
   ],
   exports: [
     HeaderComponent,
