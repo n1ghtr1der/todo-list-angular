@@ -1,4 +1,3 @@
 export const environment = {
-  production: false,
-  apiBaseUrl: 'http://localhost:3000/tasks'
+  apiBaseUrl: 'http://localhost:3000/Task'
 };

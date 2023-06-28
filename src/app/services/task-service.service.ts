@@ -20,12 +20,12 @@ export class TaskServiceService {
     return this.http.post<Task>(this.apiBaseUrl, task);
   };
 
-  public deleteTask(taskName: String): Observable<Task> {
-    return this.http.delete<Task>(`${this.apiBaseUrl}/${taskName}`);
+  public deleteTask(taskId: string): Observable<Task> {
+    return this.http.delete<Task>(`${this.apiBaseUrl}/${taskId}`);
   };
 
   public updateTask(task: Task): Observable<Task> {
-    return this.http.put<Task>(this.apiBaseUrl, task);
+    return this.http.put<Task>(`${this.apiBaseUrl}/${task.id}`, task);
   };
 
   public deleteAllTasks(): Observable<Task[]> {
