@@ -13,6 +13,7 @@
 
 .todo__image {
   margin: 0;
+  padding-top: 3.5em;
 }
 
 .task__container{
@@ -43,4 +44,8 @@
 
 #delete__icon {
   cursor: pointer;
+}
+
+.task__input:checked ~ #task__label {
+  text-decoration: line-through;
 }
