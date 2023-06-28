@@ -1,6 +1,7 @@
 import { TaskServiceService } from './../../../../services/task-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../../models/tasks';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-list',
@@ -13,11 +14,10 @@ export class TodoListComponent implements OnInit {
   task!: Task;
 
 
-  constructor(private taskService: TaskServiceService) {}
+  constructor(private taskService: TaskServiceService, private router: Router) {}
 
   ngOnInit(): void {
     this.getTasks();
-    console.log(this.taskList);
   }
 
   public getTasks(): void {
@@ -26,5 +26,19 @@ export class TodoListComponent implements OnInit {
         this.taskList = tasks;
       }
     })
-  }
+  };
+
+  public changeStatus(task: Task): void {
+    setTimeout(() => this.taskService.updateTask(task).subscribe({
+      next: () => {}
+    }), 5);
+  };
+
+  public deleteTask(task: Task): void {
+    this.taskService.deleteTask(task.id).subscribe({
+      next: () => {
+        window.location.reload();
+      }
+    });
+  };
 }
