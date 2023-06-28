@@ -1,6 +1,6 @@
 <div class="task-input__container">
-  <input type="text" name="task" id="task__input" placeholder="Insert your new task here">
-  <button id="delete__button">
+  <input [(ngModel)]="taskName" type="text" name="task" id="task__input" placeholder="Insert your new task here" (keydown.enter)="createTask(taskName)">
+  <button id="delete__button" (click)="deleteAllTasks()" *ngIf="tasks.length > 0">
     <p>Delete all items</p>
   </button>
 </div>
