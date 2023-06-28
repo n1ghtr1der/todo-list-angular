@@ -2,10 +2,10 @@
   <ul class="to-dos__container" *ngIf="taskList.length > 0; else emptyList">
     <dl class="task__container" *ngFor="let task of taskList">
       <div class="task-info__container">
-        <input class="task__input" type="checkbox" name="task" [checked]="task.done" (change)="task.done = !task.done">
+        <input class="task__input" type="checkbox" name="task" [checked]="task.done" (change)="task.done = !task.done" (click)="changeStatus(task)">
         <label id="task__label" for="task">{{ task.taskName }}</label>
       </div>
-      <a id="delete__icon">
+      <a id="delete__icon" (click)="deleteTask(task)">
         <img src="../../../../../assets/img/Vector.svg" alt="Trash Bin Icon">
       </a>
     </dl>
